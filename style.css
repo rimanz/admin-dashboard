@@ -23,6 +23,7 @@ header {
     grid-area: header;
 }
 
+/* Rules for Sidebar and Contents    */
 .sidebar {
     grid-area: sidebar;
     background-color: var(--brand-color);
@@ -30,15 +31,8 @@ header {
     font-weight: 700;
     padding: 1rem;
     display: grid;
-    gap: 2rem;
-}
-
-.branding {
-    height: 40px;
-    display: grid;
-    grid-template-columns: 40px 1fr;
-    gap: 1rem;
-    align-items: center;
+    align-content: start;
+    gap: 2.5rem;
 }
 
 .brand-logo {
@@ -50,6 +44,56 @@ header {
 
 .brand-text {
     font-size: 1.2rem;
+    align-self: center;
+}
+
+.branding, .sidebar-nav-item {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 1rem;
+}
+
+.sidebar-nav {
+    display: grid;
+    gap: 1.1rem;
+}
+
+.nav-link {
+    color: inherit;
+    text-decoration: none;
+    align-self: center;
+}
+
+.link-icon {
+    height: 1.5rem;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+/* link icons */
+.home .link-icon {
+    mask: url(images/home-variant.svg) no-repeat center;
+}
+
+.profile .link-icon {
+    mask: url(images/card-account-details-outline.svg) no-repeat center;
+}
+
+.messages .link-icon {
+    mask: url(images/message.svg) no-repeat center;
+}
+
+.history .link-icon {
+    mask: url(images/history.svg) no-repeat center;
+}
+
+.tasks .link-icon {
+    mask: url(images/calendar-check.svg) no-repeat center;
+}
+
+.communities .link-icon {
+    mask: url(images/account-group.svg) no-repeat center;
 }
 
 main {
