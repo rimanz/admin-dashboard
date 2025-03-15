@@ -32,7 +32,7 @@ header {
     padding: 1rem;
     display: grid;
     align-content: start;
-    gap: 2.5rem;
+    gap: 3rem;
 }
 
 .brand-logo {
@@ -47,14 +47,16 @@ header {
     align-self: center;
 }
 
-.branding, .sidebar-nav-item {
+.branding,
+.sidebar-nav-item,
+.quick-link-item {
     height: fit-content;
     display: grid;
     grid-template-columns: 40px 1fr;
     gap: 1rem;
 }
 
-.sidebar-nav {
+.sidebar-nav, .quick-links {
     display: grid;
     gap: 1.1rem;
 }
@@ -94,6 +96,18 @@ header {
 
 .communities .link-icon {
     mask: url(images/account-group.svg) no-repeat center;
+}
+
+.settings .link-icon {
+    mask: url(images/cog.svg) no-repeat center;
+}
+
+.support .link-icon {
+    mask: url(images/help-box.svg) no-repeat center;
+}
+
+.privacy .link-icon {
+    mask: url(images/shield-check.svg) no-repeat center;
 }
 
 main {
