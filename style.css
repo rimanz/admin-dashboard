@@ -13,15 +13,43 @@
 .container {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-areas: 'sidebar header'
                          'sidebar main';
 }
 
+/* Rules for Header Section */
 header {
     height: 150px;
+    padding: 1rem 2rem;
     grid-area: header;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2;
 }
+
+.search-bar {
+    width: 50vw;
+    height: 2rem;
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 1rem;
+}
+
+.search-icon {
+    width: 2rem;
+    height: 100%;
+    background-color: black;
+    mask: url(images/magnify.svg) no-repeat center;
+}
+
+.search-box {
+    background-color: lightsteelblue;
+    border: 1px solid lightsteelblue;
+    border-radius: 50px;
+}
+
+
 
 /* Rules for Sidebar and Contents    */
 .sidebar {
