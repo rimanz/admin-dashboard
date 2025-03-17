@@ -18,15 +18,33 @@
                          'sidebar main';
 }
 
+
 /* Rules for Header Section */
 header {
     height: 150px;
     padding: 1rem 2rem;
     grid-area: header;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 2;
+    grid-template-areas: 'search-bar user-info'
+                         'welcome-text actions';
+    align-items: center;
+    column-gap: 2rem;
+    row-gap: 1rem;
 }
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+    background-color: black;
+}
+
+.avatar {
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--secondary-color);
+    mask: url(images/account-circle.svg) no-repeat center;
+}
+
 
 .search-bar {
     width: 50vw;
@@ -49,6 +67,25 @@ header {
     border-radius: 50px;
 }
 
+.user-info {
+    height: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+    align-items: center;
+    align-content: center;
+    gap: 1rem;
+}
+
+.notification-icon {
+    mask: url(images/bell-ring-outline.svg) no-repeat center;
+    scale: 0.8;
+}
+
+.fullname {
+    font-size: 1.25rem;
+    font-weight: 600;
+    width: 10ch;
+}
 
 
 /* Rules for Sidebar and Contents    */
