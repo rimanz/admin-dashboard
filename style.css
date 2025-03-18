@@ -70,7 +70,9 @@ header {
 .user-info {
     height: 2rem;
     display: grid;
-    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+    grid-template-columns: repeat(3, min-content);
+    justify-items: end;
+    justify-content: end;
     align-items: center;
     align-content: center;
     gap: 1rem;
