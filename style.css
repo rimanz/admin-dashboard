@@ -21,13 +21,12 @@
 
 /* Rules for Header Section */
 header {
-    height: 150px;
     padding: 1rem 2rem;
     grid-area: header;
     display: grid;
     grid-template-rows: 1fr 2fr;
     grid-template-areas: 'search-bar user-info'
-                         'welcome-text actions';
+                         'welcome    actions';
     align-items: center;
     column-gap: 2rem;
     row-gap: 1rem;
@@ -101,12 +100,34 @@ header {
     line-height: 1.5;
     font-weight: 600;
     display: grid;
+    grid-area: 'welcome';
     grid-template-columns: 5rem 1fr;
     align-items: center;
 }
 
 .welcome .salutation {
     font-size: 0.9rem;
+}
+
+/* Action Buttons */
+.actions {
+    height: 100%;
+    grid-area: 'actions';
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.action-btn {
+    height: 2.25rem;
+    width: 5.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: whitesmoke;
+    background-color: var(--brand-color);
+    border: 2px solid var(--brand-color);
+    border-radius: 50px;
 }
 
 
