@@ -222,7 +222,7 @@ main {
     grid-area: main;
     height: calc(100vh - 150px);
     background-color: lightsteelblue;
-    padding: 1rem;
+    padding: 1.5rem;
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-areas: 'projects announcements'
@@ -230,8 +230,63 @@ main {
     gap: 1rem;
 }
 
-.projects {
+.section-heading {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Rules for Project Section */
+.projects-grid {
     grid-area: projects;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: start;
+    align-items: start;
+    gap: 2rem;
+}
+
+.project {
+    height: 15rem;
+    width: 25rem;
+    background-color: whitesmoke;
+    padding: 2rem;
+    border-left: 8px solid var(--secondary-color);
+    border-radius: 8px;
+    display: grid;
+    align-content: space-between;
+}
+
+.project-title {
+    margin-bottom: 0.5rem;
+}
+
+.project-summary {
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: 2rem 2rem 2rem;
+    justify-content: end;
+    gap: 1rem;
+}
+
+.action-buttons .icon {
+    scale: 0.75;
+}
+
+.star {
+    mask: url(images/star-plus-outline.svg) no-repeat center;
+}
+
+.view {
+    mask: url(images/eye-plus-outline.svg) no-repeat center;
+}
+
+.fork {
+    mask: url(images/source-fork.svg) no-repeat center;
 }
 
 .announcements {
