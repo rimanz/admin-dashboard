@@ -240,7 +240,7 @@ main {
 .projects-grid {
     grid-area: projects;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-content: start;
     align-items: start;
     gap: 2rem;
@@ -291,6 +291,30 @@ main {
 
 .announcements {
     grid-area: announcements;
+}
+
+.announcement-list {
+    background-color: whitesmoke;
+    padding: 2rem;
+    list-style-type: none;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.announcement-title {
+    padding-bottom: 0.5rem;
+}
+
+.announcement-list li {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid silver;
+}
+
+.announcement-list li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
 .trending {
