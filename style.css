@@ -293,7 +293,7 @@ main {
     grid-area: announcements;
 }
 
-.announcement-list {
+.announcement-list, .trend-list {
     background-color: whitesmoke;
     padding: 2rem;
     list-style-type: none;
@@ -303,7 +303,7 @@ main {
     gap: 1rem;
 }
 
-.announcement-title {
+.announcement-title, .user-handle {
     padding-bottom: 0.5rem;
 }
 
@@ -319,4 +319,25 @@ main {
 
 .trending {
     grid-area: trending;
+}
+
+.trend-list li {
+    display: grid;
+    grid-template-areas: 'pic handle'
+                         'pic trend';
+    gap: 1rem;
+    justify-content: start;
+    align-items: center;
+}
+
+.trend-list .avatar {
+    grid-area: pic;
+}
+
+.trend-list .user-handle {
+    grid-area: handle;
+}
+
+.trend-list .update {
+    grid-area: trend;
 }
